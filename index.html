@@ -317,13 +317,11 @@
 });
 
   </script>
-  <script>
-    // This opens music in a separate popup window once (on load)
-    window.onload = function () {
-      if (!window.musicPopup || window.musicPopup.closed) {
-        window.musicPopup = window.open('music.html', 'musicWindow', 'width=1,height=1');
-      }
-    };
-  </script>
+  <button onclick="playMusic()">Start Music</button>
+<script>
+  function playMusic() {
+    window.musicPopup = window.open('music.html', 'musicWindow', 'width=1,height=1');
+  }
+</script>
 </body>
 </html>
