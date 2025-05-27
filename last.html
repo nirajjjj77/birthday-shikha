@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=div, initial-scale=1.0">
   <link rel="stylesheet" href="./css/program.css">
-  <title>3D Cube - For Crush | SHOBHIT DEV </title>
+  <title>3D Cube - For Crush | Anubhav </title>
 
 
   <style>
@@ -35,7 +35,7 @@
       text-align: center;
       text-shadow:
         /* 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135 */
-      ;
+        none;
       font-size: 2.2rem;
       font-weight: 800;
       letter-spacing: 11px;
@@ -235,8 +235,11 @@
       font-size: 35px;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-background-size: 200% 100%;
+      background-size: 200% 100%;
       -webkit-animation: masked-animation 4s linear infinite;
+      animation: masked-animation 4s linear infinite;
     }
 
     @keyframes masked-animation {
@@ -804,8 +807,8 @@
   </div>
 
   <div id="copy">
-    <p class="text-center text-white text-sm">OG Creator <a href="https://www.instagram.com/shobhit_dev_/">Shobhit
-        Dev</a></p>
+    <p class="text-center text-white text-sm">OG Creator Anubhav
+    </p>
   </div>
 
   <div class="bg-overlay"></div>
@@ -864,14 +867,14 @@
 
 
   <script>
-    const colors = ["#ff4d6d", "#ff99c8", "#ffc6ff", "#ffb3ab", "#ffccd5"];
+    const floatingHeartColors = ["#ff4d6d", "#ff99c8", "#ffc6ff", "#ffb3ab", "#ffccd5"];
 
     document.addEventListener("mousemove", function (e) {
       const heart = document.createElement("div");
       heart.className = "heart-effect";
       heart.style.left = e.pageX + "px";
       heart.style.top = e.pageY + "px";
-      heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+      heart.style.color = floatingHeartColors[Math.floor(Math.random() * floatingHeartColors.length)];
       document.body.appendChild(heart);
 
       setTimeout(() => {
