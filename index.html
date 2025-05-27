@@ -247,7 +247,6 @@
   </style>
 </head>
 <body>
-  <iframe src="music.html" allow="autoplay" style="display:none;" id="music-frame"></iframe>
   <div id="particles-js"></div>
 
   <div class="heart-container">
@@ -317,6 +316,14 @@
   window.location.href = 'loading.html';
 });
 
+  </script>
+  <script>
+    // This opens music in a separate popup window once (on load)
+    window.onload = function () {
+      if (!window.musicPopup || window.musicPopup.closed) {
+        window.musicPopup = window.open('music.html', 'musicWindow', 'width=1,height=1');
+      }
+    };
   </script>
 </body>
 </html>
