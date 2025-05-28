@@ -190,7 +190,7 @@
             <div class="progress"></div>
         </div>
         <img class="heart" src="https://static.vecteezy.com/system/resources/thumbnails/017/419/333/small/3d-illustration-of-a-shiny-heart-symbol-of-love-and-romance-png.png" alt="Heart">
-        <button class="next-btn" onclick="parent.postMessage('load-page:main.html', '*')">NEXT →</button>
+        <button class="next-btn" onclick="window.location.href='main.html'">NEXT →</button>
     </div>
 
     <script>
@@ -237,54 +237,54 @@
         }, 500);
 
         const message = "Get ready for the cutest moment! 💖";
-let index = 0;
-function typeWriter() {
-    if (index < message.length) {
-        document.getElementById("typewriter-text").innerHTML += message.charAt(index);
-        index++;
-        setTimeout(typeWriter, 70);
-    }
-}
-typeWriter();
+            let index = 0;
+            function typeWriter() {
+              if (index < message.length) {
+                    document.getElementById("typewriter-text").innerHTML += message.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, 70);
+                }
+            }
+        typeWriter();
 
-const btn = document.querySelector('.next-btn');
-btn.addEventListener('click', () => {
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387"); // soft chime
-    audio.play();
-});
+        const btn = document.querySelector('.next-btn');
+        btn.addEventListener('click', () => {
+            const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387"); // soft chime
+            audio.play();
+        });
 
-setTimeout(() => {
-    for (let i = 0; i < 150; i++) {
-        const confetti = document.createElement('div');
-        confetti.style.position = 'absolute';
-        confetti.style.width = '8px';
-        confetti.style.height = '8px';
-        confetti.style.background = `hsl(${Math.random()*360}, 100%, 50%)`;
-        confetti.style.left = Math.random() * innerWidth + 'px';
-        confetti.style.top = '-20px';
-        confetti.style.animation = `fallConfetti ${Math.random() * 3 + 2}s linear forwards`;
-        document.body.appendChild(confetti);
-        setTimeout(() => confetti.remove(), 5000);
-    }
-}, 3000);
-
-
-function createSparkles() {
-    for (let i = 0; i < 5; i++) { // create multiple sparkles at once
-        const sparkle = document.createElement('div');
-        sparkle.className = 'sparkle';
-        sparkle.style.left = Math.random() * window.innerWidth + 'px';
-        sparkle.style.top = '-10px';
-        sparkle.style.animationDuration = (Math.random() * 3 + 2) + 's';
-        sparkle.style.background = `hsl(${Math.random() * 360}, 70%, 90%)`; // colorful sparkle
-        sparkle.style.width = sparkle.style.height = (Math.random() * 3 + 2) + 'px';
-        document.body.appendChild(sparkle);
-        setTimeout(() => sparkle.remove(), 5000);
-    }
-}
-
-setInterval(createSparkles, 200); // lower = more sparkles
-
+        setTimeout(() => {
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'absolute';
+                confetti.style.width = '8px';
+                confetti.style.height = '8px';
+                confetti.style.background = `hsl(${Math.random()*360}, 100%, 50%)`;
+                confetti.style.left = Math.random() * innerWidth + 'px';
+                confetti.style.top = '-20px';
+                confetti.style.animation = `fallConfetti ${Math.random() * 3 + 2}s linear forwards`;
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }, 3000);
+        
+        
+        function createSparkles() {
+            for (let i = 0; i < 5; i++) { // create multiple sparkles at once
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * window.innerWidth + 'px';
+                sparkle.style.top = '-10px';
+                sparkle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                sparkle.style.background = `hsl(${Math.random() * 360}, 70%, 90%)`; // colorful sparkle
+                sparkle.style.width = sparkle.style.height = (Math.random() * 3 + 2) + 'px';
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 5000);
+            }
+        }
+        
+        setInterval(createSparkles, 200); // lower = more sparkles
+        
     </script>
 </body>
 </html>
