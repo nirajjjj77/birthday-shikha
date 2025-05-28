@@ -74,7 +74,7 @@
 
         .cube-container {
             position: relative;
-            width: 250px;
+            width: 200px;
             height: 200px;
         }
 
@@ -108,7 +108,7 @@
 
         .face {
             position: absolute;
-            width: 250px;
+            width: 200px;
             height: 200px;
             border: 2px solid rgba(255, 255, 255, 0.3);
             background: rgba(255, 255, 255, 0.1);
@@ -130,36 +130,36 @@
         }
 
         /* Outer cube faces */
-        .outer-front { transform: rotateY(0deg) translateZ(125px); }
-        .outer-back { transform: rotateY(180deg) translateZ(125px); }
-        .outer-right { transform: rotateY(90deg) translateZ(125px); }
-        .outer-left { transform: rotateY(-90deg) translateZ(125px); }
-        .outer-top { transform: rotateX(90deg) translateZ(125px); }
-        .outer-bottom { transform: rotateX(-90deg) translateZ(125px); }
+        .outer-front { transform: rotateY(0deg) translateZ(100px); }
+        .outer-back { transform: rotateY(180deg) translateZ(100px); }
+        .outer-right { transform: rotateY(90deg) translateZ(100px); }
+        .outer-left { transform: rotateY(-90deg) translateZ(100px); }
+        .outer-top { transform: rotateX(90deg) translateZ(100px); }
+        .outer-bottom { transform: rotateX(-90deg) translateZ(100px); }
 
         /* Hover effects for outer cube */
         .cube:hover .outer-front { 
-            transform: rotateY(0deg) translateZ(175px) scale(1.1);
+            transform: rotateY(0deg) translateZ(150px) scale(1.1);
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
         }
         .cube:hover .outer-back { 
-            transform: rotateY(180deg) translateZ(175px) scale(1.1);
+            transform: rotateY(180deg) translateZ(150px) scale(1.1);
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
         }
         .cube:hover .outer-right { 
-            transform: rotateY(90deg) translateZ(175px) scale(1.1);
+            transform: rotateY(90deg) translateZ(150px) scale(1.1);
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
         }
         .cube:hover .outer-left { 
-            transform: rotateY(-90deg) translateZ(175px) scale(1.1);
+            transform: rotateY(-90deg) translateZ(150px) scale(1.1);
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
         }
         .cube:hover .outer-top { 
-            transform: rotateX(90deg) translateZ(175px) scale(1.1);
+            transform: rotateX(90deg) translateZ(150px) scale(1.1);
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
         }
         .cube:hover .outer-bottom { 
-            transform: rotateX(-90deg) translateZ(175px) scale(1.1);
+            transform: rotateX(-90deg) translateZ(150px) scale(1.1);
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
         }
 
@@ -170,7 +170,7 @@
 
         .inner-face {
             position: absolute;
-            width: 250px;
+            width: 200px;
             height: 200px;
             border: 1px solid rgba(255, 255, 255, 0.4);
             background: rgba(255, 255, 255, 0.2);
@@ -185,12 +185,12 @@
             opacity: 0.9;
         }
 
-        .inner-front { transform: rotateY(0deg) translateZ(125px); }
-        .inner-back { transform: rotateY(180deg) translateZ(125px); }
-        .inner-right { transform: rotateY(90deg) translateZ(125px); }
-        .inner-left { transform: rotateY(-90deg) translateZ(125px); }
-        .inner-top { transform: rotateX(90deg) translateZ(125px); }
-        .inner-bottom { transform: rotateX(-90deg) translateZ(125px); }
+        .inner-front { transform: rotateY(0deg) translateZ(100px); }
+        .inner-back { transform: rotateY(180deg) translateZ(100px); }
+        .inner-right { transform: rotateY(90deg) translateZ(100px); }
+        .inner-left { transform: rotateY(-90deg) translateZ(100px); }
+        .inner-top { transform: rotateX(90deg) translateZ(100px); }
+        .inner-bottom { transform: rotateX(-90deg) translateZ(100px); }
 
         .cube:hover .inner-cube {
             animation: spinInner 3s linear infinite;
