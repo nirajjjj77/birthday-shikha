@@ -28,6 +28,15 @@
   <!-- Page content loader -->
   <iframe id="contentFrame" src="index.html"></iframe>
 
+  <button id="startMusicBtn" style="position: absolute; z-index: 1000; top: 20px; right: 20px;">🎵 Start Music</button>
+
+  <script>
+    document.getElementById('startMusicBtn').addEventListener('click', () => {
+      document.getElementById('bgMusic').play();
+      document.getElementById('startMusicBtn').style.display = 'none'; // hide after starting
+    });
+  </script>
+
   <script>
     // Allow music control via iframe
     window.addEventListener('message', (e) => {
