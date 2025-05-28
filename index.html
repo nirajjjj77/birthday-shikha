@@ -262,11 +262,14 @@
             <input type="password" required />
             <label>Secret Love Code</label>
           </div>
-          <button type="button" class="login-btn" onclick="window.location.href='loading.html'">
+          <button type="button" class="login-btn" onclick="parent.postMessage('load-page:loading.html', '*')">
             Unlock My Heart 🗝️
-          </button>
-          
+          </button>     
         </form>
+        <div style="margin-top: 20px; text-align: center;">
+          <button class="music-btn" onclick="parent.postMessage('play-music', '*')">🎵 Start Love Music</button>
+          <button class="music-btn" onclick="parent.postMessage('pause-music', '*')">⏸️ Pause</button>
+        </div>
       </div>
     </div>
   </div>
@@ -316,17 +319,6 @@
   window.location.href = 'loading.html';
 });
 
-  </script>
-  <!-- 💖 Fancy Music Button -->
-  <button class="music-btn" onclick="playMusic()">🎵 Start Love Music</button>
-
-  <script>
-    function playMusic() {
-      const musicWindow = window.open("music.html", "musicWindow", "width=1,height=1");
-      if (!musicWindow) {
-        alert("Please allow popups for this site to hear the music!");
-      }
-    }
   </script>
   
   <!-- 💅 Styling the Button -->

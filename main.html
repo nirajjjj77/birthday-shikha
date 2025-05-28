@@ -779,7 +779,9 @@
       </p>
     </div>
 
-    <button class="next-btn" id="nextPage">Discover Your Surprise 🎁 →</button>
+    <button class="next-btn" onclick="parent.postMessage('load-page:main2.html', '*')">
+      Discover Your Surprise 🎁 →
+    </button>
   </div>
 
 
@@ -832,11 +834,13 @@
       this.style.transform = 'rotate(360deg) scale(1.2)';
       this.style.background = 'linear-gradient(45deg, #ff1493, #ba55d3)';
 
-      // Page transition
+      // Page transition (send message instead of reload)
       setTimeout(() => {
         document.body.style.opacity = '0';
         document.body.style.transform = 'scale(1.5)';
-        setTimeout(() => window.location.href = 'main2.html', 500);
+        setTimeout(() => {
+          parent.postMessage('load-page:main2.html', '*');
+        }, 500);
       }, 300);
     });
 
