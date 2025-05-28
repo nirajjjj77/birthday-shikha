@@ -317,11 +317,37 @@
 });
 
   </script>
-  <button onclick="playMusic()">Start Music</button>
+  <!-- 💖 Fancy Music Button -->
+  <button class="music-btn" onclick="playMusic()">🎵 Start Love Music</button>
+
   <script>
     function playMusic() {
-      window.musicPopup = window.open('music.html', 'musicWindow', 'width=1,height=1');
+      const musicWindow = window.open("music.html", "musicWindow", "width=1,height=1");
+      if (!musicWindow) {
+        alert("Please allow popups for this site to hear the music!");
+      }
     }
   </script>
+  
+  <!-- 💅 Styling the Button -->
+  <style>
+    .music-btn {
+      background: linear-gradient(45deg, #ff4d79, #ff7eb3);
+      border: none;
+      border-radius: 25px;
+      padding: 12px 25px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 77, 121, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+  
+    .music-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 77, 121, 0.6);
+    }
+  </style>
 </body>
 </html>
